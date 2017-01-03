@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/bookstore');
 var db = mongoose.connect
 
-app.get('/', function() {
+app.get('/', function(req, res) {
 	res.send('Hello World!');
 });
 
