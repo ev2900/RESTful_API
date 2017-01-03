@@ -67,7 +67,7 @@ var router = express.Router();
 				if(err)
 					res.send(err);
 				res.json(contact);
-			})
+			});
 		})
 
 // PROBLEM 
@@ -86,6 +86,7 @@ var router = express.Router();
 			});
 		})
 // END PROBLEM
+
 		.delete(function(req, res){
 			Contact.remove({
 				_id: req.params.contact_id
