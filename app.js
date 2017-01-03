@@ -15,7 +15,7 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/database');
 
 // Model
-var Contact = require('./app/models/contact')
+var Contact = require('./app/models/contact');
 
 // Routes
 var router = express.Router();
