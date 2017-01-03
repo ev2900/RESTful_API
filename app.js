@@ -63,7 +63,7 @@ var router = express.Router();
 		//GET
 		//(single contact)
 		.get(function(req, res) {
-			Contact.findById(req.params.contact_id, function(err, bear) {
+			Contact.findById(req.params.contact_id, function(err, contact) {
 				if(err)
 					res.send(err);
 				res.json(contact);
