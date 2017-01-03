@@ -1,0 +1,24 @@
+{
+  "name": "RESTful_API",
+  "version": "1.0.0",
+  "description": "RESTful_API",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ev2900/RESTful_API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ev2900/RESTful_API/issues"
+  },
+  "homepage": "https://github.com/ev2900/RESTful_API#readme",
+  "dependencies": {
+    "body-parser": "*",
+    "express": "*",
+    "mongoose": "*",
+  }
+}
