@@ -1,15 +1,25 @@
+// Dependencies 
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
 
-// Connect to Mongoose 
-mongoose.connect('mongodb://localhost/bookstore');
-var db = mongoose.connect
+// Body Parser
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 
-app.get('/', function(req, res) {
-	res.send('Hello World!');
-});
+// Port
+var port = process.env.PORT || 8080;
 
-app.listen(3000);
-console.log('Running on port 3000');
+// Routes
+var router = express.Router();
+
+	// Test route
+	router.get('/', function(req, res) {
+		res.json({ message: 'Hello World'});
+	});
+
+app.use('/api', router)
+
+// Server
+app.listen(port);
+console.log('listening on port 8080');
