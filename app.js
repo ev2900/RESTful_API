@@ -36,6 +36,7 @@ var router = express.Router();
 
 		//POST
 		.post(function(req, res){
+			
 			var contact = new Contact();
 			contact.name = req.body.name;
 			contact.email = req.body.email;
@@ -44,6 +45,16 @@ var router = express.Router();
 				if (err)
 					res.send(err);
 				res.json({message: 'Contact created'})
+			});
+		})
+
+		//GET 
+		//(all contacts)
+		.get(function(req, res) {
+			Contact.find(function(err, contacts){
+				if (err)
+					res.send(err);
+				res.json(contacts);
 			});
 		});
 
