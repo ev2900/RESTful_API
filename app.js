@@ -70,6 +70,7 @@ var router = express.Router();
 			})
 		})
 
+// PROBLEM 
 		.put(function(req, res){
 			Contact.findById(req.params.contact_id, function(err, contact) {
 				if(err)
@@ -82,6 +83,16 @@ var router = express.Router();
 						res.send(err);
 					res.json({message: 'Contact updated'});
 				});
+			});
+		})
+// END PROBLEM
+		.delete(function(req, res){
+			Contact.remove({
+				_id: req.params.contact_id
+			}, function(err, contact) {
+				if(err)
+					res.send(err);
+				res.json({message: 'Deleted'});
 			});
 		});
 
