@@ -58,7 +58,7 @@ var router = express.Router();
 			});
 		});
 
-	router.route('contacts/:contact_id')
+	router.route('/contacts/:contact_id')
 
 		//GET
 		//(single contact)
