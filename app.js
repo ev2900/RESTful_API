@@ -58,6 +58,17 @@ var router = express.Router();
 			});
 		});
 
+	router.route('contacts/:contact_id')
+
+		//GET
+		//(single contact)
+		.get(function(req, res) {
+			Contact.findById(req.params.contact_id, function(err, bear) {
+				if(err)
+					res.send(err);
+				res.json(contact);
+			});
+		});
 
 app.use('/api', router)
 
