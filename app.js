@@ -20,9 +20,9 @@ var Contact = require('./models/contact.js');
 // Routes
 var router = express.Router();
 
-	// Middleware
+	// Middleware (will log a message to the console when an API call is made)
 	router.use(function(req, res, next){
-		console.log('Running running ...');
+		console.log('An API call was made');
 		next();
 	});
 
@@ -30,6 +30,23 @@ var router = express.Router();
 	router.get('/', function(req, res) {
 		res.json({ message: 'Hello World'});
 	});
+
+	// GET, POST, PUT, DELETE
+	router.route('/contacts')
+
+		//POST
+		.post(function(req, res){
+			var contact = new Contact();
+			contact.name = req.body.name;
+			contact.email = req.body.email;
+
+			contact.save(function(err) {
+				if (err)
+					res.send(err);
+				res.json({message: 'Contact created'})
+			});
+		});
+
 
 app.use('/api', router)
 
