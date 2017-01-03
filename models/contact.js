@@ -10,6 +10,10 @@ var contactShcema = new Schema({
 	email: {
 		type: String,
 		require: true
+	},
+	create_date:{
+		type: Date,
+		default: Date.now
 	}
 });
 
