@@ -14,9 +14,6 @@ var port = process.env.PORT || 8080;
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/database');
 
-// Model
-var Contact = require('./models/contact.js');
-
 // API Routes
 app.use('/api', require('./routes/api'));
 

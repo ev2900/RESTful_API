@@ -1,6 +1,9 @@
 // Dependencies 
 var express = require('express');
 
+// Model
+var Contact = require('../models/contact');
+
 // Routes
 var router = express.Router();
 
