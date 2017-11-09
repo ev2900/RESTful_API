@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 // Port
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 9004;
 
 // Database 
 var mongoose = require('mongoose');
@@ -19,4 +19,4 @@ app.use('/api', require('./routes/api'));
 
 // Server
 app.listen(port);
-console.log('listening on port 8080');
+console.log('listening on port 9004');
