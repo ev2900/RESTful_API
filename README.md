@@ -3,8 +3,7 @@ A simple implementation of a RESTful API built with express the API has GET, POS
 
 Preview
 
-
-
+[PREVIEW](http://13.92.254.20:9004/api/contacts)
 
 Video 
 
