@@ -1,5 +1,5 @@
 # RESTful API
-A simple implementation of a RESTful API built with express the API has GET, POST, PUT and DELETE functionality. 
+An implementation of a RESTful API built with express the API has GET, POST, PUT and DELETE functionality. 
 
 Preview
 
